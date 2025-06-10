@@ -10,6 +10,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 colorPrimary: '#238bb8',
                 borderRadius: 8,
             },
+            components: {
+                Layout: {
+                    headerBg: '#eee',
+                },
+                Menu: {
+                    itemBg: '#eee',
+                },
+            },
         }}
     >
         <App />

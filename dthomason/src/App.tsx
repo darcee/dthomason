@@ -8,7 +8,6 @@ export default function App() {
         <Layout style={{ minHeight: '100vh' }}>
             <Header
                 style={{
-                    backgroundColor: '#eee',     // ← header bg
                     display: 'flex',
                     alignItems: 'center',
                 }}
@@ -16,7 +15,7 @@ export default function App() {
                 <div
                     className="logo"
                     style={{
-                        color: '#333',              // darker text on light bg
+                        color: '#333',
                         fontSize: '1.4rem',
                         flex: 1,
                     }}
@@ -24,10 +23,10 @@ export default function App() {
                     Darcee Thomason
                 </div>
                 <Menu
-                    theme="light"                // ← switch to light theme
+                    theme="light"
                     mode="horizontal"
                     selectable={false}
-                    style={{ backgroundColor: '#eee', borderBottom: 0 }}
+                    style={{ borderBottom: 0 }}
                     items={[
                         { key: '1', label: 'Home' },
                         { key: '2', label: 'Projects' },
