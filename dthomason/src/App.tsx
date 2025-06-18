@@ -1,47 +1,41 @@
-// src/App.tsx
-import { Layout, Menu } from 'antd';
-import {Hero} from "./components/Hero.tsx";
+import { ConfigProvider, Layout, Card, Button, Space } from 'antd';
+import { customTheme } from './theme/theme';
+import './App.css'; // We'll create this next
+
 const { Header, Content, Footer } = Layout;
 
-export default function App() {
+function App() {
     return (
-        <Layout style={{ minHeight: '100vh' }}>
-            <Header
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
-                <div
-                    className="logo"
-                    style={{
-                        color: '#333',
-                        fontSize: '1.4rem',
-                        flex: 1,
-                    }}
-                >
-                    Darcee Thomason
-                </div>
-                <Menu
-                    theme="light"
-                    mode="horizontal"
-                    selectable={false}
-                    style={{ borderBottom: 0 }}
-                    items={[
-                        { key: '1', label: 'Home' },
-                        { key: '2', label: 'Projects' },
-                        { key: '3', label: 'Contact' },
-                    ]}
-                />
-            </Header>
+        <ConfigProvider theme={customTheme}>
+            <div className="app-container">
+                <Layout className="layout">
+                    <Header className="header">
+                        <div className="logo">My App</div>
+                    </Header>
+                    <Content className="content">
+                        <div className="content-wrapper">
+                            <Space direction="vertical" size="large" style={{ width: '100%' }}>
+                                <Card title="Welcome" className="glass-card">
+                                    <p>This is your app with the beautiful gradient background!</p>
+                                    <Space>
+                                        <Button type="primary">Primary Button</Button>
+                                        <Button>Default Button</Button>
+                                    </Space>
+                                </Card>
 
-            <Content style={{ padding: '40px 24px' }}>
-                <Hero />
-            </Content>
-
-            <Footer style={{ textAlign: 'center' }}>
-                © {new Date().getFullYear()} Darcee Thomason
-            </Footer>
-        </Layout>
+                                <Card title="Another Card" className="glass-card">
+                                    <p>Notice how the cards have a semi-transparent glass effect that lets the gradient show through.</p>
+                                </Card>
+                            </Space>
+                        </div>
+                    </Content>
+                    <Footer className="footer">
+                        My App ©2024
+                    </Footer>
+                </Layout>
+            </div>
+        </ConfigProvider>
     );
 }
+
+export default App;
