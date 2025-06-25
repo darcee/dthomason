@@ -1,19 +1,28 @@
 import { ConfigProvider, Layout, Card, Button, Space } from 'antd';
 import { customTheme } from './theme/theme';
-import './App.css'; // We'll create this next
-
-const { Header, Content, Footer } = Layout;
+import './App.css';
+import Hero from "./components/Hero/Hero.tsx";
+import { HeartFilled } from '@ant-design/icons';
+const { Content, Footer } = Layout;
 
 function App() {
     return (
         <ConfigProvider theme={customTheme}>
             <div className="app-container">
                 <Layout className="layout">
-                    <Header className="header">
-                        <div className="logo">My App</div>
-                    </Header>
                     <Content className="content">
                         <div className="content-wrapper">
+                            <Hero
+                                name="Darcee Thomason"
+                                role="Software Engineering Manager"
+                                subtitle= {
+                                    <>
+                                        <HeartFilled style={{ color: 'red', marginRight: '0.4rem' }} />  Engineering with Empathy
+                                    </>
+                                }
+                                onPrimaryClick={() => console.log('Get started clicked')}
+                                onSecondaryClick={() => console.log('Demo clicked')}
+                            />
                             <Space direction="vertical" size="large" style={{ width: '100%' }}>
                                 <Card title="Welcome" className="glass-card">
                                     <p>This is your app with the beautiful gradient background!</p>
@@ -30,7 +39,7 @@ function App() {
                         </div>
                     </Content>
                     <Footer className="footer">
-                        My App ©2024
+                        D.Thomason ©2025
                     </Footer>
                 </Layout>
             </div>
