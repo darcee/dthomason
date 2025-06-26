@@ -20,8 +20,6 @@ function App() {
                                         <HeartFilled style={{ color: 'red', marginRight: '0.4rem' }} />  Engineering with Empathy
                                     </>
                                 }
-                                onPrimaryClick={() => console.log('Get started clicked')}
-                                onSecondaryClick={() => console.log('Demo clicked')}
                             />
                             <Space direction="vertical" size="large" style={{ width: '100%' }}>
                                 <Card title="Welcome" className="glass-card">
