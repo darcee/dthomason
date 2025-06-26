@@ -131,10 +131,7 @@ const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div className="hero-visual">
                     <div className="hero-image">
-                        <img
-                            src="/src/assets/images/hood-balloon.jpeg"
-                            alt="Imagine a ballon floating near Mt Hood."
-                        />
+                        <img alt="Imagine a balloon floating near Mt Hood." src="/images/hood-balloon.jpeg" />
                     </div>
                 </div>
             </div>
