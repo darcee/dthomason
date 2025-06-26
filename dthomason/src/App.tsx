@@ -14,7 +14,7 @@ function App() {
                         <div className="content-wrapper">
                             <Hero
                                 name="Darcee Thomason"
-                                role="Software Engineering Manager"
+                                role="Software Engineering, Opinions, and Random Thoughts"
                                 subtitle= {
                                     <>
                                         <HeartFilled style={{ color: 'red', marginRight: '0.4rem' }} />  Engineering with Empathy
