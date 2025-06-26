@@ -129,8 +129,6 @@ const Hero: React.FC<HeroProps> = ({
                         </Button>
                     </div>
                 </div>
-
-                {/* Professional Image */}
                 <div className="hero-visual">
                     <div className="hero-image">
                         <img
