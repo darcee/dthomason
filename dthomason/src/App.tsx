@@ -1,4 +1,4 @@
-import { ConfigProvider, Layout, Card, Button, Space } from 'antd';
+import { ConfigProvider, Layout, Card, Space } from 'antd';
 import { customTheme } from './theme/theme';
 import './App.css';
 import Hero from "./components/Hero/Hero.tsx";
@@ -23,15 +23,11 @@ function App() {
                             />
                             <Space direction="vertical" size="large" style={{ width: '100%' }}>
                                 <Card title="Welcome" className="glass-card">
-                                    <p>This is your app with the beautiful gradient background!</p>
-                                    <Space>
-                                        <Button type="primary">Primary Button</Button>
-                                        <Button>Default Button</Button>
-                                    </Space>
+                                    <p></p>
                                 </Card>
 
                                 <Card title="Another Card" className="glass-card">
-                                    <p>Notice how the cards have a semi-transparent glass effect that lets the gradient show through.</p>
+                                    <p></p>
                                 </Card>
                             </Space>
                         </div>
