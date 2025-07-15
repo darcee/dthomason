@@ -5,9 +5,9 @@ import {
     GithubOutlined,
     MailOutlined,
     DownloadOutlined,
-    CodeOutlined
 } from '@ant-design/icons';
 import './Hero.css';
+import ICanHelpModalTrigger from "../ICanHelp";
 
 const {Title, Paragraph} = Typography;
 
@@ -61,10 +61,7 @@ const Hero: React.FC<HeroProps> = ({
         <div className="portfolio-hero-container">
             <div className="portfolio-hero-content">
                 <div className="hero-main">
-                    <div className="professional-badge">
-                        <CodeOutlined className="badge-icon"/>
-                        <span>How can I make your life better?</span>
-                    </div>
+                        <ICanHelpModalTrigger />
 
                     {/* Name and Title */}
                     <Title level={1} className="hero-name">
