@@ -1,7 +1,11 @@
 import ReactDOM from 'react-dom/client';
 import { ConfigProvider } from 'antd';
+import { Amplify } from 'aws-amplify';
+import outputs from '../amplify_outputs.json';
 import 'antd/dist/reset.css';
 import App from './App';
+
+Amplify.configure(outputs);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <ConfigProvider
